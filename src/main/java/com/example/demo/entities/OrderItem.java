@@ -23,4 +23,19 @@ public class OrderItem {
 
     @Column(name = "price_at_purchase",nullable = false)
     private BigDecimal priceAtPurchase;
+
+    //To-Do: relations
+    //2.Accepting the relation of @OnetoMany and replying back with the @ManytoOne and joining the column with order_id
+    @ManyToOne
+    @JoinColumn(name = "order_id", nullable = false)
+    private Order order;
+
+    //To-Do: relations
+    //4.Accepting the relation of @OnetoMany and replying back with the @ManytoOne and joining the column with product_id as foreign Key
+    @ManyToOne
+    @JoinColumn(name = "product_id", nullable = false)
+    private Product product;
+
+
 }
+

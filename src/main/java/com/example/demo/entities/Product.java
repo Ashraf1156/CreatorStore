@@ -1,5 +1,6 @@
 package com.example.demo.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.Min;
@@ -9,6 +10,7 @@ import lombok.*;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name="products")
@@ -41,6 +43,16 @@ public class Product {
     @Column(name = "stock_quantity", nullable = false) //Here the column name should be in the snake-case, !camelcase
     private Integer stockQuantity;
 
+    // To-Do:Relations
+    // 3. One order will have Many Products so we will create the @OnetoMany Relationship
+    // Here we should map the List of OrderItems to the Products
+    /* When someone looks up a product (like a T-shirt), they only want to see the T-shirt's name, price, and stock.
+       They do not want a massive list of every single customer order that contains that T-shirt.
+       So, Here we are Setting the restriction to ignore order details when fetching a product, so we dont accidentally get all the orders associated with it
+       */
+    @JsonIgnore
+    @OneToMany(mappedBy = "product")
+    private List<OrderItem> orderItems;
 }
 
 

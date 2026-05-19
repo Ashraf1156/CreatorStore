@@ -12,6 +12,7 @@ import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
+import java.util.List;
 
 @Entity
 @Table(name="orders")
@@ -41,6 +42,14 @@ public class Order {
     @Column(name = "total_price",nullable = false)
     private BigDecimal totalPrice;
 
+// Every order will have multiple OrderItems, so the relation would be OnetoMany
+// In real-world, We will keep all the list of the items in the list so like that only here also we are keeping all the items in one list
+// Separate list of orderItems would be created for each Order
+// Here we should map the List of OrderItems to the Orders
+// 1. Creating the Relation
+    @OneToMany(mappedBy = "order")
+    private List<OrderItem> orderItems;
+
     @Column(name = "created_at")
     private LocalDateTime createdAt;
 
@@ -48,5 +57,7 @@ public class Order {
     public void prePersist(){
         this.createdAt = LocalDateTime.now();
     }
+
+
 
 }
