@@ -31,7 +31,7 @@ public class Product {
 
     private String description;
 
-    private String categories;
+    private String category;
 
     @NotNull(message = "Price is required")//setting the validation that price should not be Null
     @DecimalMin(value = "0.0", inclusive = false, message = "price must be greater than 0")// setting the restriction that price value should always be greater than 0.0

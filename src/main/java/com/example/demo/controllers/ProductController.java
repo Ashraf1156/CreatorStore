@@ -19,7 +19,7 @@ public class ProductController {
     private final ProductService productService;
 
     @PostMapping
-    public Product createProduct(@Valid Product product){
+    public Product createProduct(@Valid @RequestBody Product product){
         return productService.createProduct(product); //passing the request to the service layer to create the product
     }
 

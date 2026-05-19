@@ -24,7 +24,7 @@ public class ProductService {
 
         existingProduct.setName(product.getName());
         existingProduct.setDescription(product.getDescription());
-        existingProduct.setCategories(product.getCategories());
+        existingProduct.setCategory(product.getCategory());
         existingProduct.setPrice(product.getPrice());
         existingProduct.setStockQuantity(product.getStockQuantity());
 
