@@ -1,4 +1,8 @@
-# Developer Navigation Guide: Step-by-Step Backend Architecture
+# Step-by-Step How I built 
+
+<img width="1280" height="720" alt="maxresdefault" src="https://github.com/user-attachments/assets/aaa5db4a-b128-4c9e-b367-c5c79188ce44" />
+Video I referred: https://youtu.be/_oDpUs65OiA?si=bsAP6ZWiJvcJX6pj
+
 
 This guide outlines the exact chronological order and simple code-level steps followed to construct the CreatorStore backend application.
 
