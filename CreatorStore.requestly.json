@@ -1,0 +1,25 @@
+{
+  "meta": {
+    "version": "1.1.0",
+    "exportedAt": "2026-05-19T14:20:26.460Z",
+    "exportedUsing": "Requestly API Client"
+  },
+  "records": [
+    {
+      "id": "1961d8f6-9d27-4510-9085-aeb95de43ac3",
+      "name": "CreatorStore",
+      "description": "",
+      "type": "collection",
+      "parentId": null,
+      "deleted": false,
+      "data": {
+        "auth": {
+          "type": "inherit"
+        }
+      },
+      "rank": null
+    }
+  ],
+  "environments": [],
+  "packages": []
+}

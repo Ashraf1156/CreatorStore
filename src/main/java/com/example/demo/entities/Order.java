@@ -1,6 +1,7 @@
 package com.example.demo.entities;
 
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import jakarta.persistence.*;
 import jakarta.validation.constraints.DecimalMin;
 import jakarta.validation.constraints.NotBlank;
@@ -47,7 +48,8 @@ public class Order {
 // Separate list of orderItems would be created for each Order
 // Here we should map the List of OrderItems to the Orders
 // 1. Creating the Relation
-    @OneToMany(mappedBy = "order")
+    @JsonManagedReference
+    @OneToMany(mappedBy = "order",cascade = CascadeType.ALL)
     private List<OrderItem> orderItems;
 
     @Column(name = "created_at")

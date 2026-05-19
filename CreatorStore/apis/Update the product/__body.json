@@ -1,6 +1,0 @@
-{
-  "$schema": "https://assets.requestly.com/local/v1.5.0/body.json",
-  "contentType": "raw",
-  "raw": "{\n  \"id\": 2,\n  \"name\": \"Stickers\",\n  \"description\": null,\n  \"category\": \"Accessories\",\n  \"price\": 159,\n  \"stockQuantity\": 9000\n}",
-  "rawContentType": "application/json"
-}
